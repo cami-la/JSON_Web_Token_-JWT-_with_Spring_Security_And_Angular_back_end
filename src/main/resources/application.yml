@@ -1,3 +1,5 @@
+jwt:
+  secret: ${JWT_SECRET:-'8ha0ub$ua3ztxe17idk8f-py6tx-+8y#^qc#4*f=s$7sck1v^g'}
 server:
   port: 8081
 spring:
@@ -8,10 +10,10 @@ spring:
     url: jdbc:postgresql://localhost:5438/supportportal
     username: cami
   jpa:
+    show-sql: true
     hibernate:
       ddl-auto: create-drop
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
         format_sql: true
-    show-sql: true
